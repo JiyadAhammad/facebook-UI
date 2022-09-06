@@ -1,4 +1,5 @@
 import 'package:facebok/constant/color/colors.dart';
+import 'package:facebok/constant/size/sized_box.dart';
 import 'package:facebok/presentation/home_screen/widget/app_bar_action.dart';
 import 'package:flutter/material.dart';
 
@@ -42,8 +43,37 @@ class HomeScreen extends StatelessWidget {
               Tab(icon: Icon(Icons.home, color: kgrey, size: 30)),
               Tab(icon: Icon(Icons.live_tv_rounded, color: kgrey, size: 30)),
               Tab(icon: Icon(Icons.person_pin, color: kgrey, size: 30)),
-              Tab(icon: Icon(Icons.notifications_sharp, color: kgrey, size: 30)),
+              Tab(
+                  icon:
+                      Icon(Icons.notifications_sharp, color: kgrey, size: 30)),
               Tab(icon: Icon(Icons.menu, color: kgrey, size: 30)),
+            ],
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(15),
+          child: Row(
+            children:  [
+             const CircleAvatar(
+                child: Icon(
+                  Icons.all_inclusive,
+                ),
+              ),
+              kwidth,
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Write Something here....',
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+                  ),
+                ),
+              ),
+              kwidth20,
+             const Icon(
+                Icons.collections_rounded,
+                color: Colors.green,
+                size: 30,
+              ),
             ],
           ),
         ),
